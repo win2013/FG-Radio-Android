@@ -1,0 +1,177 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> 
+<meta name="format-detection" content="telephone=no" />
+<title>FG USA Radio</title>
+
+<link rel="stylesheet" type="text/css" href="fg.css">
+<script type="text/javascript"  src="phonegap.js"></script>
+<script type="text/javascript"  src="animation.js"></script>
+<script type="text/javascript"  src="window.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/login-butto
+n-over.png','images2/bt-ringtones-h.png','images2/bt-buysong-h.png','images2/bt-wallpaper-h.png','images2/bt-twi
+tter-h.png','images2/bt-facebook-h.png')">
+
+<div id='radioSelector'>
+<table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000">
+  <tr>
+    <td align="center" background="images2/back-top-bar.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="2%" align="left" valign="middle"><img src="images2/back-top-bar.jpg" alt="back-bar" width="5" height="45" align="absmiddle"></td>
+        <td width="28%" align="left" valign="middle">
+	
+	<a href="#" onclick="goto('radioSelector','configuration')"><img src="images2/bt-configuration.png" alt="Configuration" width="88" height="30" align="absmiddle"></a>
+        </td>
+        
+	<td width="48%" align="center"><strong class="Titles">Web Radios</strong></td>
+        <td width="20%" align="right"><img src="images2/bt-exit.png" width="58" height="30" alt="Exit"></td>
+        <td width="2%" align="right"><img src="images2/back-top-bar.jpg" alt="back-bar" width="5" height="45" align="absmiddle"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="13%" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">
+	    <a href="#" onclick="goto('radioSelector','RadioSelected'); playStream(1);"><img src="images2/bt-FGUSA.png" width="103" height="59" alt="FG USA"></a></td>
+            <td align="center" valign="middle">
+	    <a href="#" onclick="goto('radioSelector','RadioSelected');playStream(2);"><img src="images2/bt-undergroundFG.png" width="104" height="59" alt="FG underground"></a></td>
+            <td align="center" valign="middle"><a href="#" onclick="goto('radioSelector','RadioSelected');playStream(3);"><img src="images2/bt-FGDance.png" width="94" height="59" alt="FG Dance"></a></td>
+            </tr>
+            <tr>
+	    <td align="center" valign="middle"><a href="#" onclick="goto('radioSelector','RadioSelected');playStream(4);"><img src="images2/bt-FGChic.png" width="103" height="62" alt="FG Chic"></a></td>
+            <td align="center" valign="middle"><a href="#" onclick="goto('radioSelector','RadioSelected');playStream(5);"><img src="images2/FG-classic.png" width="104" height="62" alt="FG Classic"></a></td>
+            <td align="center" valign="middle"><a href="#" onclick="goto('radioSelector','RadioSelected');playStream(6);"><img src="images2/bt-FGM.png" width="94" height="62" alt="Freeking Good Music"></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+
+
+<div id='RadioSelected' style="visibility:hidden">
+<table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="5" align="left" background="images2/back-top-bar.jpg"><p><img src="images2/back-top-bar.jpg" alt="back-bar" width="5" height="45" align="absmiddle"></p></td>
+    <td width="44" align="center" background="images2/back-top-bar.jpg"><a href="#" onclick="goto('RadioSelected','radioSelector')" ><img src="images2/bt-back.png" width="44" height="31" alt="Back"></a></td>
+    <td width="226" align="center" background="images2/back-top-bar.jpg"><strong class="smalltext" style="font-family: Arial, Helvetica, sans-serif" id="TopLabel">Author<br>
+      Title of Song<br>
+      DJs Name
+    </strong></td>
+    <td width="39" align="center" background="images2/back-top-bar.jpg"><img src="images2/fg-corner-logo.png" width="39" height="44" alt="FG corner logo"></td>
+    <td width="6" align="center" background="images2/back-top-bar.jpg"><img src="images2/back-top-bar.jpg" alt="back-bar" width="5" height="45" align="absmiddle"></td>
+  </tr>
+  <tr>
+    <td colspan="5" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="2" align="center" valign="middle"><strong class="MiddleTitle">Congratulations new visitor!</strong></td>
+        </tr>
+      <tr>
+        <td width="66%" align="center" valign="middle">Your IP Address has been selected as the potential winner for Saturday September 24, 2010</td>
+        <td width="34%" align="center" valign="middle"><img src="images2/bt-clickhere.png" width="88" height="33" alt="click here"></td>
+        </tr>
+        <tr>
+        <td colspan="2" align="center" valign="middle"><img src="images2/Advertising.png" width="319" height="59" alt="advertising"></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="5" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ring tone','','images2/bt-ringtones-h.png',1)"><img src="images2/bt-ringtones.png" alt="Buy Ringtones" name="ring tone" width="65" height="48" border="0"></a></td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('buy songs','','images2/bt-buysong-h.png',1)"><img src="images2/bt-buysong.png" alt="Buy Songs" name="buy songs" width="63" height="48" border="0"></a></td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('wall paper','','images2/bt-wallpaper-h.png',1)"><img src="images2/bt-wallpaper.png" alt="Buy Wallpaper" name="wall paper" width="63" height="48" border="0"></a></td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Twiter','','images2/bt-twitter-h.png',1)"><img src="images2/bt-twitter.png" alt="Configure Twitter" name="Twiter" width="64" height="48" border="0"></a></td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('facebookw','','images2/bt-facebook-h.png',1)"><img src="images2/bt-facebook.png" alt="Configure Facebook" name="facebookw" width="65" height="48" border="0"></a></td>
+    
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+
+
+<div id="configuration" style="visibility:hidden"> 
+  <table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" background="images2/back-top-bar.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="2%" align="left" valign="middle"><img src="images2/back-top-bar.jpg" alt="back-bar" width="5" height="45" align="absmiddle"></td>
+          <td width="14%" align="left" valign="middle">
+
+          <a onClick="goto('configuration','radioSelector')" href="#"> <img src="images2/bt-back.png" width="44" height="31" alt="Go Back"></a></td>
+          <td width="69%" align="center"><strong class="Titles">Configuration</strong></td>
+          <td width="13%" align="right">&nbsp;</td>
+          <td width="2%" align="right"><img src="images2/back-top-bar.jpg" alt="back-bar" width="5" height="45" align="absmiddle"></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td align="center" background="images2/back-stripes.png"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="13%" align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="5%" align="left" valign="middle">&nbsp;</td>
+              <td width="82%" align="center" valign="middle">&nbsp;</td>
+              <td width="10%" align="center" valign="middle">&nbsp;</td>
+              <td width="3%" align="right" valign="middle">&nbsp;</td>
+            </tr>
+            <tr background="images2/box-top-back.png">
+              <td align="left" valign="middle" ><img src="images2/box-top-left.png" width="8" height="43" alt="top left"></td>
+              <td align="left" valign="middle" class="blackTitles">My Messages</td>
+              <td align="left" valign="middle"><img src="images2/bt-small-forward-arrow.png" width="28" height="27" alt="arrow"></td>
+              <td align="right" valign="middle"><img src="images2/box-top-right.png" width="8" height="43" alt="top right"></td>
+            </tr>
+            <tr background="images2/box-top-back.png">
+              <td align="left" valign="middle"><img src="images2/box-middle-left.png" width="8" height="44" alt="left"></td>
+              <td align="left" valign="middle" class="blackTitles">Twitter Configuration</td>
+              <td align="left" valign="middle"><img src="images2/bt-small-forward-arrow.png" width="28" height="27" alt="arrow"></td>
+              <td align="right" valign="middle"><img src="images2/box-middle-right.png" width="8" height="44" alt="middle"></td>
+            </tr>
+            <tr background="images2/box-middle-back.png">
+              <td align="left" valign="middle"><img src="images2/box-bottom-left.png" width="8" height="43" alt="left"></td>
+              <td align="left" valign="middle" class="blackTitles">Facebook Configuration</td>
+              <td align="left" valign="middle"><img src="images2/bt-small-forward-arrow.png" width="28" height="27" alt="arrow"></td>
+              <td align="right" valign="middle"><img src="images2/box-bottom-right.png" width="8" height="43" alt="bottom right"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle">&nbsp;</td>
+              <td align="right" valign="middle"><img src="images2/box-bottom-right.png" width="8" height="43" alt="bottom right"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle">&nbsp;</td>
+              <td align="left" valign="middle" class="blackTitles">Facebook Configuration</td>
+              <td align="left" valign="middle"><img src="images2/bt-small-forward-arrow.png" width="28" height="27" alt="arrow"></td>
+              <td align="right" valign="middle"><img src="images2/box-bottom-right.png" width="8" height="43" alt="bottom right"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle">&nbsp;</td>
+              <td colspan="2" align="center" valign="middle">&nbsp;</td>
+              <td align="right" valign="middle">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+

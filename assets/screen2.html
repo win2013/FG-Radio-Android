@@ -1,0 +1,178 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+	<title>Radio FG Web Radios</title> 
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" /> 
+	<link rel="stylesheet" type="text/css" href="stylesheet/iphone.css" /> 
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="window.js"></script>
+	<script type="text/javascript" src="animation.js"></script>
+	<script type="text/javascript" src="jquery.infinitecarousel.js"></script>
+	
+	<script type="text/javascript" charset="utf-8"> 
+	   	var curid = 1;
+	   	var curSongTitle, curArtist;
+	   	
+      	$(function(){
+	    	$('#carousel1').infiniteCarousel({
+			displayThumbnailNumbers:1,
+			displayThumbnailBackground:0,
+			displayTime:1000000,
+			thumbnailWidth:'40px',
+			thumbnailHeight:'40px',
+			transitionSpeed: 500,
+			thumbnailFontSize:'1em'
+		      });
+ 	     });
+ 	     
+ 	     function updateStatus(type) { 
+ 	     	    var status = encodeURIComponent(' is listening to '+curSongTitle+' by '+curArtist+' on RadioFG USA http://a2f.me/fgusa');	
+ 	     	    alert('status = '+status+ ' type='+type);     	    
+ 	     		$.getJSON('http://ubiwireless.com/social/statusupdate.php?r=radiofgusa&t='+type+'&status='+status, function(data) {
+ 	     			  alert(data);	
+ 	     		});
+ 	     		return true;	
+ 	     }
+ 	     
+ 	     function getData(id) {
+ 	     	     var link =  "http://asterisk.ubiwireless.com/radiofg/w/json.php?stationid="+id;
+ 	     	     //link = encodeURIComponent(link);
+ 	     	     
+ 	     	    // $.ajax({
+  				//		url: link,
+  				//		cache: false, //dataType: 'json',
+  				//		success: function(data) { alert(data); }
+				 // });
+
+				 //alert('going to '+link);
+		         $.getJSON(link, function(json) {
+		         	    //alert('Updating : '+json.songtitle+'  '+json.artist+' '+json.ringtone);
+        		     	$('.songtitle'+id).text(json.songtitle);
+        			    $('.artistname'+id).text(json.artist);
+        		   
+        	            if (curid == id) {
+        		 	    	curArtitst     = json.artist;
+        			    	curSongTitle   = json.songtitle;
+        			    }
+       		     });
+       		   return true;
+		  }
+		  
+		  FetchData();
+		  setInterval ( "FetchData()", 20000 );
+		  function FetchData()
+		  {
+   				//alert("DoSomething ...()"); 	
+   				getData(1);
+   				getData(2);
+   				getData(3);
+   				getData(4);
+   				getData(5);
+   				getData(6);
+		  }
+		  
+		  function toggle(id) {
+		  	    
+		  	    if ((plugins.AudioStream.getStatus() == "isPlaying") || (plugins.AudioStream.getStatus() == "isLoading"))
+		  	    {
+		  	    	//alert('Stopping .... '+id);		  	    
+		  	    	stopStream();
+		  	    } 
+		  	    else 
+		  	    { 
+		  		   //alert('Now playing .... '+id);		  	    
+		  		   playStream(id);
+		  		   curid = id;
+		  	    }	
+		  }
+
+
+		function onLoad() {
+        	document.addEventListener("deviceready", onDeviceReady, false);
+		}
+
+    	function onDeviceReady() {
+        	document.addEventListener("orientationChanged", updateOrientation);
+    	}
+
+    	function updateOrientation(e) {
+        	switch (e.orientation) {
+            	case 90:
+                	window.location = "screem2.html";
+                	break;
+            	case -90:
+                	window.location = "config.html";
+                	break;
+       		 }
+    	}
+
+</script> 
+ 
+<style type="text/css"> 
+#carousel1 {
+	margin:0 auto;
+	padding: 0 20px;
+	width:200px;
+	height:200px;
+	overflow:scroll;
+	border:2px solid #999;
+}
+#carousel1 + div {
+	margin:0 auto;
+}
+
+
+</style> 
+<body> 
+
+<div id="header">
+<h1>Radio FG Web Radios</h1> 
+</div>
+
+<div id="carousel1">
+    <ul>
+        <li onclick="toggle('1');">
+        <img alt="" src="images3/logo-fgusa.png" width="400" height="250"/>
+        <p>Radio FG USA is now playing <span id="songtitle1">Dynamite</span> by <span id="artistname1">DJ R</span></p>
+	    </li>
+	    
+        <li onclick="toggle('2');">
+        <img alt="" src="images3/logoplayer_UG.gif" width="400" height="250"/><p> 
+        <span id="songtitle2">Dynamite</span> by <span id="artistname2">DJ R</span></p>      
+        </li>
+        
+        <li onclick="toggle('3');">
+        <img alt="" src="images3/logoplayer_DANCE.gif" width="400" height="250"/><p>
+        <span id="songtitle3">Dynamite</span> by <span id="artistname3">DJ R</span></p>
+        </li>
+        
+        <li onclick="toggle('4');">
+        <img alt="" src="images3/logo-fgchic.png" width="400" height="250"/><p>
+        <span id="songtitle4">Dynamite</span> by <span id="artistname4">DJ R</span></p>
+        </li>
+        
+        <li onclick="toggle('5');">
+        <img alt="" src="images3/logoplayer_VINT.gif" width="400" height="250"/><p>
+        <span id="songtitle5">Dynamite</span> by <span id="artistname5">DJ R</span></p>
+        </li>
+        
+        <li onclick="toggle('6');">
+        <img alt="" src="images3/Logo-freeking-good.gif" width="400" height="250"/><p>
+        <span id="songtitle6">Dynamite</span> by <span id="artistname6">DJ R</span></p>
+        </li>
+    </ul>
+</div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>          
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('buy songs','','images2/bt-buysong-h.png',1)"><img src="images2/bt-buysong.png" alt="Buy Songs" name="buy songs" width="63" height="48" border="0"></a></td>
+          <td><a href="#" onclick="updateStatus('twitter');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Twiter','','images2/bt-twitter-h.png',1)"><img src="images2/bt-twitter.png" alt="Configure Twitter" name="Twiter" width="64" height="48" border="0"></a></td>
+          <td><a href="#" onclick="updateStatus('facebook');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('facebookw','','images2/bt-facebook-h.png',1)"><img src="images2/bt-facebook.png" alt="Configure Facebook" name="facebookw" width="65" height="48" border="0"></a></td>
+      </tr>
+</table>
+<p><a class="button white" href="config.html" id="backButton">Configuration</a></p>      
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+	<title>Configuration</title> 
+	<link rel="stylesheet"       href="stylesheet/iphone.css" /> 
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" /> 
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="phonegap.js"></scriot>
+	<script type="text/javascript" src="window.js"></script>
+	
+	<script type="text/javascript" charset="utf-8"> 
+		window.onload = function() {
+		  setTimeout(function(){window.scrollTo(0, 1);}, 100);
+		}
+	
+	    function animate() {	
+	       $("#loader").css('display', 'block');
+	    }
+	</script> 
+</head> 
+ 
+<body> 
+	
+	<div id="header"> 
+		<h1>Configuration</h1> 
+	    <a href="screen3.html" id="backButton">Back</a> 
+	</div>
+ 
+ <ul>
+       <li> <a  onclick="animate();" href="http://ubiwireless.com/social/fbook.php?r=radiofgusa"><img src="images2/bt-facebook.png" class="ico" />Facebook</a> 
+       <a href="#">Setup your facebook with Radio FG USA </a>
+       <a href="#">Share your status, click on Facebook Connect and let your friends know about the best electronic music 
+	   </a>
+       </li>
+       <li><a onclick="animate();" href="http://ubiwireless.com/social/twitt.php?r=radiofgusa"><img src="images2/bt-twitter.png" class="ico" />Twitter</a> <a href="#">Setup twitter with Radio FG USA </a><a href="#">Share your status, allow Radio FG USA app to post on your twitter  and let your friends know about the best electronic music
+</a></li>
+      <li><a onclick="animate();" href="http://radiofgusa.com/"><img src="icon.png">FG Store</a> 
+      <a href="#">Our discounts for clubs, tickets, in your area </a><a href="#">If you share your status with others, Radio FG USA may issue discounts to you</a></li>
+</ul>	
+
+<script type="text/javascript">
+var admob_vars = {
+ pubid: 'a14caf3984559f2', // publisher id
+ bgcolor: '000000', // background color (hex)
+ text: 'FFFFFF', // font-color (hex)
+ ama: false, // set to true and retain comma for the AdMob Adaptive Ad Unit, a special ad type designed for PC sites accessed from the iPhone.  More info: http://developer.admob.com/wiki/IPhone#Web_Integration
+ test: true // test mode, set to false to receive live ads
+};
+</script>
+<script type="text/javascript" src="http://mmv.admob.com/static/iphone/iadmob.js"></script>
+
+<div id="loader" style="display:none">
+    <img src="images/image-loading.gif" alt="loader" />
+</div>
+<a style="display:scroll;position:fixed;bottom:5px;left:5px;" href="config.html" title="Back to Top"><img src="http://ubiwireless.com/social/images/cross.png"/></a>
+       	 
+</body>
+</html>
+

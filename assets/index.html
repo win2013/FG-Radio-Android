@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+	<title>DMX Demos</title> 
+    <script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="window.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.notifybar.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>		
+	<link rel="stylesheet" type="text/css" media="screen" href="css/ui-lightness/jquery-ui-1.8.5.custom.css"/>
+	<link type="text/css" href="css/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/notifybar.css"/> 
+	<link rel="stylesheet" type="text/css" media="screen" href="css/round.css"/>
+	
+</head>
+
+<body bgcolor="#000000" style="font-family:'Lucida Casual', 'Comic Sans MS';">
+<div id="mainscreen"> 
+  <div id="accordion" style="display:none;"> 
+    
+	<h3><a href="#">DMX Ch0</a></h3> 
+	<div> 
+	    <center>
+	    <img id="image1" onclick="toggle('1');" alt="" src="images4/1.png" width="160" height="120"/>
+	    </center>
+		<p>Song:<b> <span id="songtitle1"></span> </b> by <b> <span id="artist1"></b> 			
+		<center>
+		<a onclick="updateStatus('facebook');" href="#"><img src="images/FaceBook-icon32.png"/>it!</a> or 
+		<a onclick="updateStatus('twitter');"  href="#"><img src="images/Twitter-icon32.png"/>it!</a> or 
+		<a id="itunes1" href="#"><img id="i1" src="images4/itunes.png"/></a> 
+		</center> 
+		</p>			
+	</div> 
+	<h3><a href="#">DMX Ch1</a></h3> 
+	<div> 
+  	    <center><img id="image2" onclick="toggle('2');" alt="" src="images4/2.png" width="160" height="120"/></center>
+	    <p>Song:<B> <span id="songtitle2"></span> </b>, by <b> <span id="artist2"></b>		
+		<center>
+		<a onclick="updateStatus('facebook');" href="#"><img src="images/FaceBook-icon32.png"/></a> or 
+		<a onclick="updateStatus('twitter');" href="#"><img src="images/Twitter-icon32.png"/>it!</a> or 
+		Buy <a id="itunes2" href="#"><img src="images4/itunes.png"/></a> 
+		</center>
+		</p>		
+	</div> 
+	<h3><a href="#">DMX Ch3</a></h3> 
+	<div>
+	    <center><img id="image3" onclick="toggle('3');" alt="" src="images4/3.png" width="160" height="120"/></center>
+		<p>Song: <B> <span id="songtitle3"></span></b>, by <b><span id="artist3"></b>  </p>		
+        <center>
+        <a onclick="updateStatus('facebook');" href="#"><img src="images/FaceBook-icon32.png"/>it!</a> or 
+		<a onclick="updateStatus('twitter');" href="#"><img src="images/Twitter-icon32.png"/>it!</a> or 
+		Buy <a id="itunes3" href="#"><img src="images4/itunes.png"/></a> 
+		</center>
+		</p>	
+	</div> 
+   
+     
+  </div> 
+</div>
+
+<div class="rbroundbox">
+	<div class="rbtop"><div></div></div>
+		<div id="test" class="rbcontent" style="font-family:'Lucida Casual', 'Comic Sans MS';">
+		</div><!-- /rbcontent -->
+	<div class="rbbot"><div></div></div>
+</div><!-- /rbroundbox -->
+		
+<center>		
+<script type="text/javascript">
+var admob_vars = {
+ pubid: 'a14caf3984559f2', // publisher id
+ bgcolor: '000000', // background color (hex)
+ text: 'FFFFFF', // font-color (hex)
+ ama: false, // set to true and retain comma for the AdMob Adaptive Ad Unit, a special ad type designed for PC sites accessed from the iPhone.  More info: http://developer.admob.com/wiki/IPhone#Web_Integration
+ test: false // test mode, set to false to receive live ads
+};
+</script>
+<script type="text/javascript" src="http://mmv.admob.com/static/iphone/iadmob.js"></script>
+</center>
+
+
+
+<div id="dialog-confirm-twitter" title="Update your status?">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Do you want to update your Twitter status?</p>
+</div>
+
+<div id="dialog-confirm-facebook" title="Update your status?">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Do you want to update your Facebook status?</p>
+</div>
+
+</body>
+</html>
+
